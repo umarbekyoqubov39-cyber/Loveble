@@ -1,15 +1,22 @@
 import React from "react";
 
-function Button({ text, variant, onClick }) {
+function Button({ text, variant, onClick, LeftArrow, RightArrow }) {
   const variants = {
-    primary: "bg-[#4346EF] text-white px-5 py-2 rounded-md",
-    secondary: "bg-[#F0F0F0] text-[#333] px-5 py-2 rounded-md",
-    danger: "bg-[#FF6B6B] text-white px-5 py-2 rounded-md",
+    primary:
+      "bg-gradient-to-r from-blue-500 to-purple-600 text-white px-5 py-2 rounded-md flex items-center gap-2 hover:scale-105 transition-transform duration-300 ease-in-out",
+    secondary:
+      "bg-white text-[#333] px-5 py-2 rounded-md border border-[#E5E7EB] flex items-center gap-5  hover:text-[#4346EF] hover:scale-105 transition-transform duration-300 ease-in-out",
+    danger:
+      "bg-transparent text-[#4346EF] flex items-center gap-5 hover:gap-8  ",
   };
+
   return (
-    <>
-      <button className={`${variants[variant]}`}>{text}</button>
-    </>
+    <button className={`${variants[variant]}`}>
+      {LeftArrow && <LeftArrow />}
+      <span>{text}</span>
+
+      {RightArrow && <RightArrow />}
+    </button>
   );
 }
 
