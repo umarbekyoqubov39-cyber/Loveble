@@ -1,7 +1,7 @@
 import React from "react";
 import ChoosCard from "./ChoosCard";
 import { features } from "../product";
-
+import Button from "../components/Button";
 function WhyChoos() {
   return (
     <>

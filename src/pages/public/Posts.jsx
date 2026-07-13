@@ -1,7 +1,7 @@
-import React from "react";
+import Input from "../../components/Input";
 
 function Posts() {
-  return <div>Posts</div>;
+  return <Input></Input>;
 }
 
 export default Posts;

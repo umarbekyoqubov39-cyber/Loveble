@@ -1,20 +1,21 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/footer";
+import { Outlet } from "react-router-dom";
+
 function PubliLayout() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <header>
-        <Navbar></Navbar>
+        <Navbar />
       </header>
-      <main>
+
+      <main className="flex-1">
         <Outlet />
       </main>
-      <footer>
-        <Footer></Footer>
-      </footer>
-    </>
+
+      <Footer />
+    </div>
   );
 }
 
