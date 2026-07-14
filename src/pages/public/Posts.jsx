@@ -6,7 +6,7 @@ function Posts() {
   return (
     <>
       <Input variant="primary" placeholder="   Search"></Input>
-      <section className="flex flex-col justify-center items-center gap-20 sm:justify-center md:flex-row flex-wrap md:justify-between my-20 px-5 center">
+      <section className="center flex flex-wrap justify-center  md:grid md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 center my-20 ">
         {posts.map((post) => (
           <PostCard key={post.id} post={post} />
         ))}
