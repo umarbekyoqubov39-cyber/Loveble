@@ -6,8 +6,8 @@ import posts from "../../src/data/Cards";
 import PostCard from "./PostCard";
 function LatestPosts() {
   return (
-    <section className="center my-[128px] flex flex-row flex-wrap items-center justify-center md:justify-between gap-[50px] ">
-      {posts.slice(0, 3).map((post) => (
+    <section className="center my-20 flex flex-row flex-wrap items-center justify-center md:justify-between gap-[50px] ">
+      {posts.slice(1, 4).map((post) => (
         <PostCard key={post.id} post={post} />
       ))}
     </section>

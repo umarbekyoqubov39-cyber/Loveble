@@ -52,7 +52,7 @@ const posts = [
     title: "Understanding UI/UX Design",
     description:
       "Learn how good design principles improve user experience and product quality.",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800",
+    image: "C.svg",
     category: "Design",
     author: "Alex Wilson",
     authorImage: "https://randomuser.me/api/portraits/men/5.jpg",
@@ -64,7 +64,7 @@ const posts = [
     title: "Tailwind CSS Best Practices",
     description:
       "Build clean and scalable user interfaces using utility-first CSS.",
-    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800",
+    image: "K.svg",
     category: "Tailwind",
     author: "Sophia Miller",
     authorImage: "https://randomuser.me/api/portraits/women/6.jpg",

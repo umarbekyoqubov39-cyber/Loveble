@@ -1,6 +1,6 @@
 import React from "react";
 
-function Input({ variant = "primary", placeholder }) {
+function Input({ variant, placeholder }) {
   const variants = {
     primary:
       "w-full h-12 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500",
@@ -13,9 +13,9 @@ function Input({ variant = "primary", placeholder }) {
   };
 
   return (
-    <section className="center">
-      <div className="flex flex-col gap-5 items-center text-center">
-        <h1 className="text-7xl">Explore Our Posts</h1>
+    <section className="bg-[#F1F1FE] pt-20 pb-40">
+      <div className="flex flex-col gap-5 items-center text-center center">
+        <h1 className="text-5xl ">Explore Our Posts</h1>
 
         <div className="w-full max-w-xl mt-8">
           <input

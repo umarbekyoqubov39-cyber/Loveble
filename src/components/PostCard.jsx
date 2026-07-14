@@ -5,8 +5,8 @@ import { FaArrowRight } from "react-icons/fa";
 
 function PostCard({ post }) {
   return (
-    <section>
-      <div className="bg-white rounded-xl border border-gray-200 max-w-[384px] overflow-hidden shadow-sm hover:shadow-lg duration-300">
+    <section className="flex flex-wrap">
+      <div className="bg-white rounded-xl border border-gray-200 max-w-[380px]  overflow-hidden shadow-sm hover:shadow-lg duration-300">
         <img
           src={post.image}
           alt={post.title}
