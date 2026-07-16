@@ -1,24 +1,26 @@
 import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
-
+import { useNavigate } from "react-router-dom";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
+  let navigate = useNavigate();
   return (
     <>
-      <section className="bg-white shadow-md">
-        <nav className="flex justify-between items-center px-10 py-5 container-custom">
+      <section className="bg-white shadow-md fixed top-0 left-0 w-full bg-white/70 backdrop-blur-md border-b border-white/20 z-50">
+        <nav className="flex justify-between items-center px-10 py-5 container-custom center ">
           <img src="/Link.svg" alt="Logo" />
 
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-10 items-center">
             <Link to="/">Home</Link>
             <Link to="/posts">Posts</Link>
-
-            <Button text="Login" variant="primary" />
+            <Link to="/login">
+              <Button text="Login" variant="primary" />
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -47,11 +49,9 @@ function Navbar() {
                 Posts
               </Link>
 
-              <Button
-                text="Login"
-                variant="primary"
-                onClick={() => setIsOpen(false)}
-              />
+              <Link to="/login">
+                <Button text="Login" variant="primary" />{" "}
+              </Link>
             </div>
           </div>
         </div>

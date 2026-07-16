@@ -1,39 +1,43 @@
-import { FaCalendarAlt } from "react-icons/fa";
+import React from "react";
 import Button from "./Button";
 import RightArrow from "./Icons/RightArrow";
-import { FaArrowRight } from "react-icons/fa";
-
-function PostCard({ post }) {
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+function PostCard({ article }) {
+  let { id, title, created_at, content, image, updata_at, author, category } =
+    article;
+  let Navigate = useNavigate();
   return (
-    <section className="flex flex-wrap">
-      <div className="bg-white rounded-xl border border-gray-200 max-w-[380px]  overflow-hidden shadow-sm hover:shadow-lg duration-300">
-        <img
-          src={post.image}
-          alt={post.title}
-          className="w-full h-44 object-cover hover:scale-105 duration-300"
-        />
+    <div
+      onClick={() => Navigate(`/posts/${id}`)}
+      className="rounded-xl overflow-hidden shadow-lg border bg-white"
+    >
+      <img src={image} alt={title} className="w-full h-56 object-cover" />
 
-        <div className="p-5">
-          <div className="flex items-center gap-2 text-gray-400 text-sm">
-            <FaCalendarAlt />
-            <span>{post.date}</span>
-          </div>
+      <div className="p-5">
+        <span className="text-sm text-blue-600 font-medium">
+          {category.name}
+        </span>
 
-          <h2 className="text-2xl font-bold mt-3">{post.title}</h2>
+        <p>{new Date(created_at).toLocaleDateString()}</p>
 
-          <p className="text-gray-500 text-sm mt-3 leading-6">
-            {post.description}
-          </p>
+        <h2 className="text-2xl font-bold mt-2">{title}</h2>
 
-          <Button
-            text="Read More"
-            variant="danger"
-            RightArrow={RightArrow}
-            className="mt-5"
-          />
+        <p className="text-gray-600 mt-3 line-clamp-3">{content}</p>
+
+        <div className="flex justify-between items-center mt-5 text-sm text-gray-500">
+          <Link to={`/posts`}>
+            <Button
+              text={"Read more"}
+              variant="danger"
+              RightArrow={RightArrow}
+            ></Button>
+          </Link>
+
+          <span>{new Date(created_at).toLocaleDateString()}</span>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

@@ -13,10 +13,12 @@ function Input({ variant, placeholder }) {
   };
 
   return (
-    <section className="bg-[#F1F1FE] pt-20 pb-40">
-      <div className="flex flex-col gap-5 items-center text-center center">
+    <section className="bg-[#F1F1FE] my-10 ">
+      <div className="flex flex-col gap-5 items-center text-center center pt-20 pb-40">
         <h1 className="text-5xl ">Explore Our Posts</h1>
-
+        <p className="text-2xl text-[#6B7280]">
+          Discover amazing content from talented writers across various topics
+        </p>
         <div className="w-full max-w-xl mt-8">
           <input
             type="text"

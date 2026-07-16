@@ -1,6 +1,7 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 function StartText() {
   return (
     <div className="flex gap-5 flex-col justify-self-start md:justify-between md:flex-row items-center center w-full">
@@ -11,9 +12,11 @@ function StartText() {
         </p>
       </div>
       <div className="flex">
-        <Button variant="secondary" text="vive card ">
-          <FaArrowRight />
-        </Button>
+        <Link to={"/posts"}>
+          <Button variant="secondary" text="vive all ">
+            <FaArrowRight />
+          </Button>
+        </Link>
       </div>
     </div>
   );

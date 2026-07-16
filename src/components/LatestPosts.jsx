@@ -1,16 +1,13 @@
 import React from "react";
-import RightArrow from "./Icons/RightArrow";
-import Button from "./Button";
-import { FaCalendarAlt } from "react-icons/fa";
-import posts from "../../src/data/Cards";
 import PostCard from "./PostCard";
-function LatestPosts() {
+
+function LatestPosts({ articles }) {
   return (
-    <section className="center flex flex-wrap justify-center  md:grid md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 center my-20 ">
-      {posts.slice(1, 4).map((post) => (
-        <PostCard key={post.id} post={post} />
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 center my-20">
+      {articles.map((item) => (
+        <PostCard key={item.id} article={item} />
       ))}
-    </section>
+    </div>
   );
 }
 
