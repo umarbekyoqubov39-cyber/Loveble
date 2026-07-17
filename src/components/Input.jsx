@@ -3,7 +3,7 @@ import React from "react";
 function Input({ variant, placeholder }) {
   const variants = {
     primary:
-      "w-full h-12 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500",
+      "w-full shadow-lg h-12 px-4 py-auto border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500",
 
     secondary:
       "w-full h-12 px-4 border-2 border-black rounded-lg focus:outline-none",

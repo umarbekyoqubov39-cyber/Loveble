@@ -11,7 +11,7 @@ import PubliLayout from "./pages/layouts/PubliLayout";
 import AuthLaout from "./pages/layouts/AuthLaout";
 import AdminLayout from "./pages/layouts/AdminLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+import ProtectedRout from "./components/ProtectedRout";
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -33,7 +33,11 @@ const routes = createBrowserRouter([
   },
   {
     path: "/admin",
-    element: <AdminLayout />,
+    element: (
+      <ProtectedRout>
+        <AdminLayout></AdminLayout>
+      </ProtectedRout>
+    ),
     children: [
       {
         index: true,

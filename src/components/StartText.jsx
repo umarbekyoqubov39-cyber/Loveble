@@ -2,6 +2,7 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import Button from "./Button";
 import { Link } from "react-router-dom";
+import RightArrow from "./Icons/RightArrow";
 function StartText() {
   return (
     <div className="flex gap-5 flex-col justify-self-start md:justify-between md:flex-row items-center center w-full">
@@ -13,9 +14,11 @@ function StartText() {
       </div>
       <div className="flex">
         <Link to={"/posts"}>
-          <Button variant="secondary" text="vive all ">
-            <FaArrowRight />
-          </Button>
+          <Button
+            variant="secondary"
+            text="vive all "
+            RightArrow={RightArrow}
+          ></Button>
         </Link>
       </div>
     </div>

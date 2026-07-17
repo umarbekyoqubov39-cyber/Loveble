@@ -1,7 +1,9 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import Button from "../../components/Button";
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 import { useState, useEffect } from "react";
+
 function PostDetail({}) {
   let { id } = useParams();
   console.log(id);
@@ -72,6 +74,13 @@ function PostDetail({}) {
             <p className="font-medium">
               {new Date(posts.updated_at).toLocaleDateString()}
             </p>
+            <Link to="/posts">
+              <Button
+                variant={"primary"}
+                text={" Back to posts"}
+                className="mx-10"
+              ></Button>
+            </Link>
           </div>
         </div>
       </div>
